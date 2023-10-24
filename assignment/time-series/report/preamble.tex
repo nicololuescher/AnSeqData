@@ -1,0 +1,77 @@
+% Language and Font
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{tabularx}
+
+% Citations (see references.bib)
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{references.bib}
+
+% Font
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Images
+\usepackage{graphicx}   % for including graphics
+\graphicspath{ {img/} } % root directory for graphics
+\usepackage{subcaption} % figures inside figures (e.g. for side by side figures)
+%\usepackage{subfig}
+
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,bookmarks=false]{hyperref}
+
+\usepackage[headsepline, footsepline, plainfootsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+%\automark{chapter}
+\ihead{\leftmark{}}
+\ofoot[\thepage]{\thepage}
+
+% Section Headers
+\renewcommand{\thesection}{\arabic{section}}
+
+% Section Headers
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\filright}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{40pt}{20pt}
+\renewcommand{\thesection}{\arabic{section}} % <-- Add this line
+
+\setlength{\parindent}{0cm}
+\titleformat{\section}[block]{\Large\bfseries\filright}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{40pt}{20pt}
+
+\setlength{\parindent}{0cm}
+
+\usepackage[english,linecolor=gray,bordercolor=gray,backgroundcolor=yellow]{todonotes}
+
+% Code Highlighting
+\usepackage{listings}
+\usepackage{xparse}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\NewDocumentCommand{\codeword}{v}{%
+    \texttt{\textcolor{blue}{#1}}%
+}
+\lstset{
+    basicstyle=\ttfamily,            % size of fonts used for the code
+    breaklines=true,                 % automatic line breaking only at whitespace
+    captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\color{mygreen},    % comment style
+    keywordstyle=\color{blue},       % keyword style
+    stringstyle=\color{mymauve},     % string literal style
+    extendedchars=true,
+    frame=single,
+    frameround=tttt,
+    framexleftmargin=1pt,
+    framexrightmargin=1pt
+}
+
+\usepackage{amsmath}
+
+% Enumerated list modification
+\usepackage{enumitem}
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{import}
+
+\selectlanguage{english}

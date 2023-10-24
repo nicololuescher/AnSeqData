@@ -1,0 +1,32 @@
+\section{Selection and Evaluation of Forecasting Model}\label{sec:selection-and-evaluation-of-forecasting-model}
+
+Given the nature of the dataset concerning "Commercial paper outstanding, financial companies", selecting an appropriate simple forecasting model is crucial for accurate predictions.
+The dataset exhibits a near-linear trend with a deviation towards the end, characteristic of many financial time-series data.
+Among the simple models discussed - Average Method, Naive Method, Seasonal Naive Method, and Drift Method - the Drift Method, also known as Random Walk with Drift, and the Random Walk without drift are considered relevant for this analysis.\\
+
+The Naive Method, although simplistic, may not capture the trend inherent in the data.
+Similarly, the Average Method is likely to overlook the evolving trend as it would compute a mean that falls somewhere between the earlier lower values and the later higher values, thereby providing inaccurate forecasts.
+The Seasonal Naive Method is not suitable due to the absence of a seasonal pattern in the data.\\
+
+The Drift Method, which is essentially a Random Walk with Drift, incorporates a constant term to account for a linear trend in the data.
+However, given the deviation from the linear trend towards the end of the series, a Random Walk without drift appears to be a more fitting choice.
+This model is simplistic yet relevant for financial time-series data exhibiting a near-linear trend with some deviation.
+
+\subsection{Evaluation of Forecasting Model}\label{subsec:evaluation-of-forecasting-model}
+
+After fitting the Random Walk without drift model to the dataset, a comprehensive analysis of the residuals and the model's performance on the test set was conducted
+to evaluate its forecasting accuracy and reliability.\\
+
+The residuals from the model were analyzed using the Ljung-Box test to check for auto-correlation.
+The test yielded a Q* statistic of 38.88 with 24 degrees of freedom, resulting in a p-value of 0.02811.
+This p-value, being below the conventional threshold of 0.05, indicates the potential presence of auto-correlation in the residuals.
+It may be beneficial to further explore the residual behavior through additional diagnostic tests or visual inspections to ensure the model's assumptions are adequately met.\\
+
+The performance of the model on the test set was assessed using the previously established indicators - Mean Absolute Error (MAE) and Root Mean Square Error (RMSE).
+The model yielded a MAE of 123.95944 and a RMSE of 152.2772.
+These values are within the target thresholds of 80 and 180, respectively, indicating that the model is reasonably accurate in forecasting the commercial paper outstanding.\\
+
+To further evaluate the model's performance, we performed several accuracy checks on other models, such as the naive method, the average method, seasonal naive method, and the drift method.
+It was observed that the values of MAE and RMSE for the seasonal naive method were lower than the random walk without drift model.
+However, the seasonal naive method is not suitable for this dataset as it does not account for the linear trend in the data.
+We can conclude that the random walk without drift model is the most appropriate model for this dataset, given its simplicity and accuracy in forecasting the commercial paper outstanding.

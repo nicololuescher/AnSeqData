@@ -1,0 +1,25 @@
+\section{Exponential Smoothing}\label{sec:exponential-smoothing}
+
+As previously discussed, the dataset does not incorporate any seasonality and the dataset exhibits a near-linear
+trend with a deviation towards the end.
+This leads us to the (A,N) model in ETS terminology, where the trend is additive and the seasonality
+is none, which is also known as Holt's linear trend method.\\
+
+Upon fitting the model, we proceeded to analyze the residuals.
+Residuals are the differences between our observed and predicted values, and their analysis is crucial for
+understanding any patterns or systematic structures that the model may have failed to capture.
+To evaluate the accuracy of the model, we calculated the previously established accuracy metrics -
+Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).
+The model yielded a MAE of 196.67898 and a RMSE of 233.5003 on the test set.
+The respective values on the training set are much lower, which might indicate that the model is overfitting the training set.\\
+
+To ensure the adequacy of our model, we conducted a Ljung-Box test on the residuals.
+The test yielded a Q* statistic of 37.732 with 24 degrees of freedom, resulting in a p-value of 0.03692.
+Since the p-value is less than the conventional threshold of 0.05, it suggests the presence of autocorrelation in the residuals at lag 24.
+This indicates that there might be some information left in the residuals that the model has not captured.
+As we picked the model based on the ETS framework, we assume that the model is adequate.\\
+
+The performance of the model compared to the simple model described in the previous section is lower.
+The simple model yielded a MAE of 123.95944 and a RMSE of 152.2772 on the test set.
+We assume that our selected exponential smoothing model has an adequate ACI value, as we picked the model
+based on the ETS framework, which is why we did not consider any other models.

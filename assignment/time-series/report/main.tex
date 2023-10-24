@@ -1,0 +1,24 @@
+\documentclass[11pt]{report}
+\input{preamble}
+
+% Document
+\begin{document}
+	\import{chapters/0-preface/}{titlepage.tex}
+
+	\tableofcontents
+	\newpage
+
+	\import{chapters/}{1-exploratory-analysis.tex}
+	\import{chapters/}{2-indicators.tex}
+	\import{chapters/}{3-simple-model.tex}
+	\import{chapters/}{4-exponential-smoothing.tex}
+	\import{chapters/}{5-ets-auto-arima.tex}
+	\import{chapters/}{6-conclusion.tex}
+
+	% Bibliography
+	\begin{appendix}
+		\printbibliography
+		\listoffigures
+	\end{appendix}
+
+\end{document}
