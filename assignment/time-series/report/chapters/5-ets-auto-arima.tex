@@ -1,1 +1,19 @@
 \section{ETS and Auto ARIMA}\label{sec:ets-and-auto-arima}
+
+Now we apply the ETS and Auto ARIMA models to the dataset.
+This clarifies the best model for the dataset and allows us to compare the results to the previously established models.\\
+
+The ETS model suggests a ETS(M,A,N) model, which is equivalent to Holt's linear trend method.
+The model yielded a MAE of 198.0852 and a RMSE of 235.04577 on the test set.
+These values are slightly higher than the values of the simple model described in the previous section.
+To further elaborate on the results and to ensure that the ETS model is adequate, we compared the AIC values of the models.
+We found that the SES model has a AIC value of 1593.299 and the ETS model has a AIC value of 1564.055.
+This indicates that the ETS model is more adequate than the SES model, even though the performance of the ETS model is lower.
+This is due to the fact that these error metrics are not always a good indicator of the adequacy of a model.\\
+
+The Auto ARIMA Model suggests a ARIMA(0,1,0)(1,0,0)[12] with drift model.
+The model yielded a MAE of 265.81343 and a RMSE of 314.24356 on the test set.
+These values are much higher than the values of the simple model described in the previous section.
+We also compared the AIC values of the models.
+We found that the Auto ARIMA model has a AIC value of 1311.64, which is much lower than the AIC values of the other models.
+This indicates that the Auto ARIMA model is more adequate than the other models.
