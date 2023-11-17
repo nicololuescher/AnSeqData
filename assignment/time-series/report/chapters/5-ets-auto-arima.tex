@@ -16,4 +16,6 @@ The model yielded a MAE of 265.81343 and a RMSE of 314.24356 on the test set.
 These values are much higher than the values of the simple model described in the previous section.
 We also compared the AIC values of the models.
 We found that the Auto ARIMA model has a AIC value of 1311.64, which is much lower than the AIC values of the other models.
-This indicates that the Auto ARIMA model is more adequate than the other models.
+This indicates that the Auto ARIMA model is more adequate than the other models.\\
+
+Conducting further analysis using the Ljung-Box test on the residuals of the models, we found that the the residuals of the ETS model showed a Q* statistic of 16.13 with 24 lags and a p-value of 0.8496, suggesting that the residuals are close to white noise. Similar results were found for the Auto ARIMA model, with a Q* statistic of 32.015 with 24 lags and a p-value of 0.1266. Alltough higher, this result is still acceptable.\\

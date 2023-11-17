@@ -1,1 +1,13 @@
 \section{Conclusion}\label{sec:conclusion}
+
+This comprehensive report has thoroughly analyzed the time series data of "Commercial paper outstanding, financial companies" using various statistical models and methods. Our exploratory analysis revealed a distinct upward trend in the dataset, starting from 1982 to 1991, and a decrease in auto-correlation over time. These initial observations laid a solid foundation for further in-depth analysis and model selection.
+
+The selection of Mean Absolute Error (MAE) and Root Mean Square Error (RMSE) as our primary performance indicators proved instrumental in assessing the effectiveness of our forecasting models. The Random Walk without drift model, selected due to its relevance to our near-linear time series data with a deviation, demonstrated reasonable accuracy, with MAE and RMSE values within our predetermined thresholds.
+
+The exploration of Exponential Smoothing, specifically Holt's linear trend method, indicated a potential overfitting issue, as evidenced by higher error metrics on the test set compared to the training set. Despite this, our Ljung-Box test results supported the adequacy of the model, based on the ETS framework.
+
+In the comparative analysis of ETS and Auto ARIMA models, we observed that while the ETS model was more adequate in terms of AIC values, its performance metrics were slightly surpassed by the simple model. Conversely, the Auto ARIMA model, despite having higher error metrics, showed a significantly lower AIC value, suggesting greater adequacy.
+
+Our rigorous evaluation process, including residual analysis and the Ljung-Box test, affirmed that the residuals of both the ETS and Auto ARIMA models were close to white noise, reinforcing the reliability of these models.
+
+In conclusion, this report has successfully navigated the complexities of forecasting financial time series data. The Random Walk without drift model emerged as the most suitable for its simplicity and accuracy. However, the lower AIC values of the ETS and Auto ARIMA models highlight the nuanced trade-off between model adequacy and performance metrics. Future research could focus on enhancing these models' predictive accuracy while maintaining their statistical adequacy, thus providing a more holistic approach to forecasting in financial time series data.
