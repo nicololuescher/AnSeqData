@@ -1,24 +1,20 @@
-\documentclass[11pt]{report}
+\documentclass[10pt]{report}
 \input{preamble}
 
 % Document
 \begin{document}
 	\import{chapters/0-preface/}{titlepage.tex}
 
+	\pagenumbering{gobble} % Suppress page numbering
 	\tableofcontents
+	\clearpage % End suppression of page numbering
 	\newpage
 
+	\pagenumbering{arabic} % Start page numbering
 	\import{chapters/}{1-exploratory-analysis.tex}
 	\import{chapters/}{2-indicators.tex}
 	\import{chapters/}{3-simple-model.tex}
 	\import{chapters/}{4-exponential-smoothing.tex}
 	\import{chapters/}{5-ets-auto-arima.tex}
 	\import{chapters/}{6-conclusion.tex}
-
-	% Bibliography
-	\begin{appendix}
-		\printbibliography
-		\listoffigures
-	\end{appendix}
-
 \end{document}
